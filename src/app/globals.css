@@ -20,11 +20,6 @@ a {
   text-decoration: none !important;
 }
 
-.brick {
-  background-image: url("../../public/images/brickWall.webp");
-  background-size: 50%;
-}
-
 .font-shadow {
   text-shadow: 0 8px #000000;
   margin: 0;

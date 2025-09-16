@@ -8,6 +8,11 @@ const pressStart2P = Press_Start_2P({
   subsets: ["latin"],
 });
 
+export const metadata = {
+  title: "Suniti Portfolio",
+  description: "My portfolio Mr.Suniti Sukontaprapun",
+};
+
 
 export default function RootLayout({ children }) {
   return (
