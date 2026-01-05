@@ -189,7 +189,7 @@ export default function Home() {
                             </span>
                             I am a Frontend Developer
                         </h2>
-                        <p className="indent-10">
+                        <p className="indent-10 leading-7">
                             committed to creating outstanding and valuable
                             digital products. I possess a deep understanding of
                             User Experience (UX) and User Interface (UI),
@@ -203,7 +203,7 @@ export default function Home() {
                     <div class="nes-container with-title">
                         <p class="title">PROFILE</p>
                         <div class="lists pl-3 lg:pl-10">
-                            <ul class="nes-list is-circle grid gap-4">
+                            <ul class="nes-list is-circle grid gap-4 leading-7">
                                 <li>Name : Suniti Sukontaprapun</li>
                                 <li>Nickname : Mon</li>
                                 <li>Age : 23 years</li>
@@ -215,7 +215,7 @@ export default function Home() {
                     <div class="nes-container with-title">
                         <p class="title">EDUCATION</p>
                         <div class="lists pl-3 lg:pl-10">
-                            <ul class="nes-list is-circle grid gap-4">
+                            <ul class="nes-list is-circle grid gap-4 leading-7">
                                 <li>
                                     University : Rajamangala University of
                                     Technology Suvarnabhumi
@@ -246,7 +246,7 @@ export default function Home() {
                                 </h2>
                             </div>
                             <div class="lists pl-3 lg:pl-10">
-                                <ul class="nes-list is-circle grid gap-4">
+                                <ul class="nes-list is-circle grid gap-4 leading-7">
                                     <li>Software Testing</li>
                                     <li>Requirements Gathering</li>
                                     <li>On-site User Training</li>
@@ -265,7 +265,7 @@ export default function Home() {
                                 </h2>
                             </div>
                             <div class="lists pl-3 lg:pl-10">
-                                <ul class="nes-list is-circle grid gap-4">
+                                <ul class="nes-list is-circle grid gap-4 leading-7">
                                     <li>Frontend System Development</li>
                                     <li>Requirements Gathering</li>
                                     <li>UI Design & Creation</li>
@@ -284,7 +284,7 @@ export default function Home() {
                                 </h2>
                             </div>
                             <div class="lists pl-3 lg:pl-10">
-                                <ul class="nes-list is-circle grid gap-4">
+                                <ul class="nes-list is-circle grid gap-4 leading-7">
                                     <li>Code Development & Bug Fixing</li>
                                     <li>Feature Design & Development</li>
                                     <li>Testing & Error Resolution</li>
@@ -298,7 +298,7 @@ export default function Home() {
                 </div>
                 <div class="nes-container with-title">
                     <p class="title">MY TECH STACK</p>
-                    <p className="indent-10 pb-4 lg:pb-10">
+                    <p className="indent-10 pb-4 lg:pb-10 leading-7">
                         I'm no pro, but I know these languages exeptionally well
                         exept for React, which I am currently learning. I also
                         have extensive experience in business management as well
@@ -429,7 +429,7 @@ export default function Home() {
                                 <i class="nes-icon instagram is-medium hover:-translate-y-4 transition-all duration-300 ease-in-out"></i>
                             </Link>
                         </div>
-                        <p className="indent-10">
+                        <p className="indent-10 leading-7">
                             If you are a potential client or employer then
                             please feel free to contact me any time! Just make
                             sure to include your name, your companies name, and
