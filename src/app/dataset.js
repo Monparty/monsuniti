@@ -38,6 +38,45 @@ import afp6 from "../../public/projectImages/afp6.png";
 import pnw1 from "../../public/projectImages/pnw1.png";
 import pnw2 from "../../public/projectImages/pnw2.png";
 
+export const personalInfo = {
+    greeting: "Hi I'm Mon",
+    cvFile: "/documents/Suniti-Sukontaprapun-Resume-Eng.pdf",
+};
+
+export const aboutText =
+    "Senior Frontend Developer (React & Next.js) with 3 years of experience specializing in large-scale Web Application development with a focus on Performance Optimization and Responsive Design. Proficient in complex State Management and RESTful API integration. Leverages AI Tools to streamline the development process and deliver fast, business-driven User Experiences effectively.";
+
+export const profileData = [
+    { label: "Name", value: "Suniti Sukontaprapun" },
+    { label: "Nickname", value: "Mon" },
+    { label: "Birthdate", value: "April 23, 2002" },
+    { label: "Nationality", value: "Thai" },
+];
+
+export const educationData = [
+    { label: "University", value: "Rajamangala University of Technology Suvarnabhumi" },
+    { label: "Degree", value: "Bachelor" },
+    { label: "Group", value: "Business and Information Technology" },
+    { label: "Branch", value: "Information systems and digital innovation" },
+    { label: "Graduation", value: "2024" },
+    { label: "GPA", value: "3.18" },
+];
+
+export const techStackIntro =
+    "I'm no pro, but I know these languages exceptionally well, which I am currently learning. I also have extensive experience in business management as well as team-work and leadership. My creativity is what puts me a cut above everyone else at my skill level, as well as how quickly I can learn new skills on the go!";
+
+export const contactData = {
+    email: "sukontaprapun@gmail.com",
+    socials: [
+        { icon: "github", href: "https://github.com/Monparty", label: "GitHub" },
+        { icon: "linkedin", href: "https://www.linkedin.com/in/suniti-sukontaprapun-a4975b347/", label: "LinkedIn" },
+        { icon: "facebook", href: "https://web.facebook.com/mon.monza.5855", label: "Facebook" },
+        { icon: "instagram", href: "https://www.instagram.com/monsuniti/", label: "Instagram" },
+    ],
+    message:
+        "If you are a potential client or employer then please feel free to contact me any time! Just make sure to include your name, your companies name, and what you're interested in. Thank you!!",
+};
+
 export const workExperienceData = [
     {
         name: "Sense Info Tech Co., Ltd.",

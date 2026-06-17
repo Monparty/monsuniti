@@ -4,7 +4,7 @@ import "nes.css/css/nes.min.css";
 
 const pressStart2P = Press_Start_2P({
   weight: "400",
-  variable: "--font-geist-mono",
+  variable: "--font-press-start",
   subsets: ["latin"],
 });
 
