@@ -3,6 +3,7 @@ import bootstrapLogo from "../../public/images/bootstrapLogo.png";
 import cssLogo from "../../public/images/cssLogo.png";
 import githubLogo from "../../public/images/githubLogo.png";
 import gitLogo from "../../public/images/gitLogo.png";
+import apiLogo from "../../public/images/apiLogo.png";
 import jqueryLogo from "../../public/images/jqueryLogo.png";
 import jsLogo from "../../public/images/jsLogo.png";
 import laravelLogo from "../../public/images/laravelLogo.png";
@@ -10,8 +11,21 @@ import nextLogo from "../../public/images/nextLogo.png";
 import supabaseLogo from "../../public/images/supabaseLogo.png";
 import phpLogo from "../../public/images/phpLogo.png";
 import reactLogo from "../../public/images/reactLogo.png";
-import sqlLogo from "../../public/images/sqlLogo.png";
+import drizzleLogo from "../../public/images/drizzleLogo.png";
+import mysqlLogo from "../../public/images/mysqlLogo.png";
 import tailwindLogo from "../../public/images/tailwindLogo.png";
+import scssLogo from "../../public/images/scssLogo.png";
+import muiLogo from "../../public/images/muiLogo.png";
+import antdLogo from "../../public/images/antdLogo.png";
+import sqlLogo from "../../public/images/sqlLogo.png";
+import dockerLogo from "../../public/images/dockerLogo.png";
+import figmaLogo from "../../public/images/figmaLogo.png";
+import playwrightLogo from "../../public/images/playwrightLogo.png";
+import vercelLogo from "../../public/images/vercelLogo.png";
+import rhfLogo from "../../public/images/rhfLogo.png";
+import yupLogo from "../../public/images/yupLogo.png";
+import gsapLogo from "../../public/images/gsapLogo.png";
+import aiLogo from "../../public/images/aiLogo.png";
 
 export const workExperienceData = [
     {
@@ -79,7 +93,7 @@ export const technicalSkills = [
             },
             {
                 name: "React Native",
-                src: gitLogo,
+                src: reactLogo,
             },
             {
                 name: "TailwindCSS",
@@ -91,19 +105,19 @@ export const technicalSkills = [
             },
             {
                 name: "SCSS",
-                src: gitLogo,
+                src: scssLogo,
             },
             {
                 name: "Material UI",
-                src: gitLogo,
+                src: muiLogo,
             },
             {
                 name: "Ant Design",
-                src: gitLogo,
+                src: antdLogo,
             },
             {
                 name: "PrimeReact",
-                src: gitLogo,
+                src: reactLogo,
             },
         ],
     },
@@ -141,7 +155,7 @@ export const technicalSkills = [
             },
             {
                 name: "REST API",
-                src: gitLogo,
+                src: apiLogo,
             },
             {
                 name: "Supabase",
@@ -149,7 +163,7 @@ export const technicalSkills = [
             },
             {
                 name: "Drizzle ORM",
-                src: gitLogo,
+                src: drizzleLogo,
             },
         ],
     },
@@ -158,7 +172,7 @@ export const technicalSkills = [
         details: [
             {
                 name: "MySQL/PostgreSQL",
-                src: gitLogo,
+                src: mysqlLogo,
             },
             {
                 name: "Git",
@@ -170,19 +184,19 @@ export const technicalSkills = [
             },
             {
                 name: "Docker",
-                src: gitLogo,
+                src: dockerLogo,
             },
             {
                 name: "Vercel",
-                src: gitLogo,
+                src: vercelLogo,
             },
             {
                 name: "Figma",
-                src: gitLogo,
+                src: figmaLogo,
             },
             {
                 name: "Playwright",
-                src: gitLogo,
+                src: playwrightLogo,
             },
         ],
     },
@@ -191,15 +205,15 @@ export const technicalSkills = [
         details: [
             {
                 name: "React Hook Form",
-                src: gitLogo,
+                src: rhfLogo,
             },
             {
                 name: "Yup",
-                src: gitLogo,
+                src: yupLogo,
             },
             {
                 name: "Redux",
-                src: gitLogo,
+                src: reactLogo,
             },
             {
                 name: "jQuery",
@@ -207,11 +221,11 @@ export const technicalSkills = [
             },
             {
                 name: "GSAP",
-                src: gitLogo,
+                src: gsapLogo,
             },
             {
                 name: "Axios",
-                src: gitLogo,
+                src: reactLogo,
             },
         ],
     },
@@ -224,19 +238,19 @@ export const technicalSkills = [
             },
             {
                 name: "Cursor",
-                src: gitLogo,
+                src: aiLogo,
             },
             {
                 name: "ChatGPT",
-                src: gitLogo,
+                src: aiLogo,
             },
             {
                 name: "Google Stitch",
-                src: gitLogo,
+                src: aiLogo,
             },
             {
                 name: "Prompt Engineering",
-                src: gitLogo,
+                src: aiLogo,
             },
         ],
     },
