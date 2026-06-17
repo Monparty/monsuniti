@@ -6,8 +6,7 @@ import { ImgComparisonSlider } from "@img-comparison-slider/react";
 import arrow from "../../public/images/arrow.png";
 import me from "../../public/images/me.png";
 import me8bit from "../../public/images/me8bit.png";
-import moncookImg1 from "../../public/images/moncookImg1.webp";
-import { technicalSkills, workExperienceData } from "./dataset";
+import { myProjectData, technicalSkills, workExperienceData } from "./dataset";
 
 export default function Home() {
     const scrollableDivRef = useRef(null);
@@ -50,15 +49,24 @@ export default function Home() {
         }
     };
 
-    const [isPopupOpen, setIsPopupOpen] = useState(false);
+    const [isPopupOpen, setIsPopupOpen] = useState({
+        isOpen: false,
+        data: null,
+    });
 
-    const openPopup = () => {
-        setIsPopupOpen(true);
+    const openPopup = (popupData = null) => {
+        setIsPopupOpen({
+            isOpen: true,
+            data: popupData,
+        });
         document.body.style.overflow = "hidden";
     };
 
     const closePopup = () => {
-        setIsPopupOpen(false);
+        setIsPopupOpen({
+            isOpen: false,
+            data: null,
+        });
         document.body.style.overflow = "auto";
     };
 
@@ -66,8 +74,8 @@ export default function Home() {
         <div>
             <div className="container mx-auto px-4 lg:px-10 py-10 flex flex-col gap-8 lg:gap-10">
                 <div className="flex justify-center items-center flex-col w-full gap-8">
-                    <div class="nes-container with-title">
-                        <p class="title">Hi I'm Mon</p>
+                    <div className="nes-container with-title">
+                        <p className="title">Hi I'm Mon</p>
                         <ImgComparisonSlider className="border-0 outline-0">
                             <Image
                                 slot="first"
@@ -83,7 +91,7 @@ export default function Home() {
                     </div>
                     <button
                         type="button"
-                        class="nes-btn w-auto"
+                        className="nes-btn w-auto"
                         onClick={() => {
                             const link = document.createElement("a");
                             link.href = "/documents/Suniti-Sukontaprapun-Resume-Eng.pdf";
@@ -97,8 +105,8 @@ export default function Home() {
                     </button>
                 </div>
                 <div id="about">
-                    <div class="nes-container with-title">
-                        <p class="title">ABOUT ME</p>
+                    <div className="nes-container with-title">
+                        <p className="title">ABOUT ME</p>
                         <h2 className="text-xl">
                             <span className="nes-text is-primary text-xl me-3">#</span>I am a Frontend Developer
                         </h2>
@@ -112,10 +120,10 @@ export default function Home() {
                     </div>
                 </div>
                 <div className="grid lg:grid-cols-2 gap-8 lg:gap-10">
-                    <div class="nes-container with-title">
-                        <p class="title">PROFILE</p>
-                        <div class="lists pl-3 lg:pl-10">
-                            <ul class="nes-list is-circle grid gap-4 leading-7">
+                    <div className="nes-container with-title">
+                        <p className="title">PROFILE</p>
+                        <div className="lists pl-3 lg:pl-10">
+                            <ul className="nes-list is-circle grid gap-4 leading-7">
                                 <li>Name : Suniti Sukontaprapun</li>
                                 <li>Nickname : Mon</li>
                                 <li>Birthdate : April 23, 2002</li>
@@ -123,10 +131,10 @@ export default function Home() {
                             </ul>
                         </div>
                     </div>
-                    <div class="nes-container with-title">
-                        <p class="title">EDUCATION</p>
-                        <div class="lists pl-3 lg:pl-10">
-                            <ul class="nes-list is-circle grid gap-4 leading-7">
+                    <div className="nes-container with-title">
+                        <p className="title">EDUCATION</p>
+                        <div className="lists pl-3 lg:pl-10">
+                            <ul className="nes-list is-circle grid gap-4 leading-7">
                                 <li>University : Rajamangala University of Technology Suvarnabhumi</li>
                                 <li>Degree : Bachelor</li>
                                 <li>Group : Business and Information Technology</li>
@@ -137,18 +145,18 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
-                <div class="nes-container with-title border-y-0! border-x-0! pb-0! px-0! lg:border-y-[4px]! lg:border-x-[4px]! lg:px-[2rem]! lg:pb-[2rem]!">
-                    <p class="title">WORK EXPERIENCE</p>
+                <div className="nes-container with-title border-y-0! border-x-0! pb-0! px-0! lg:border-y-[4px]! lg:border-x-[4px]! lg:px-[2rem]! lg:pb-[2rem]!">
+                    <p className="title">WORK EXPERIENCE</p>
                     <div className="grid lg:grid-cols-2 gap-8 lg:gap-10">
                         {workExperienceData?.map((item, index) => (
-                            <div class="nes-container with-title" key={index}>
-                                <p class="title">{item?.name}</p>
+                            <div className="nes-container with-title" key={index}>
+                                <p className="title">{item?.name}</p>
                                 <div className="mb-4 pl-2">
                                     <h2>{item?.position}</h2>
                                     <h2 className="nes-text is-primary text-xs">{item?.period}</h2>
                                 </div>
-                                <div class="lists pl-3 lg:pl-10">
-                                    <ul class="nes-list is-circle grid gap-4 leading-7">
+                                <div className="lists pl-3 lg:pl-10">
+                                    <ul className="nes-list is-circle grid gap-4 leading-7">
                                         {item?.details.map((detail, i) => (
                                             <li key={i}>{detail}</li>
                                         ))}
@@ -158,8 +166,8 @@ export default function Home() {
                         ))}
                     </div>
                 </div>
-                <div class="nes-container with-title">
-                    <p class="title">MY TECH STACK</p>
+                <div className="nes-container with-title">
+                    <p className="title">MY TECH STACK</p>
                     <p className="indent-10 pb-4 lg:pb-10 leading-7 mb-0!">
                         I'm no pro, but I know these languages exeptionally well, which I am currently learning. I also
                         have extensive experience in business management as well as team-work and leadership. My
@@ -169,14 +177,14 @@ export default function Home() {
                     {technicalSkills.map((item, index) => (
                         <div
                             key={index}
-                            class="nes-container with-title border-y-0! border-x-0! pb-0! px-0! lg:border-y-[4px]! lg:border-x-[4px]! lg:px-[2rem]! lg:pb-[2rem]! mb-8"
+                            className="nes-container with-title border-y-0! border-x-0! pb-0! px-0! lg:border-y-[4px]! lg:border-x-[4px]! lg:px-[2rem]! lg:pb-[2rem]! mb-8"
                         >
-                            <p class="title">{item?.title}</p>
+                            <p className="title">{item?.title}</p>
                             <div className=" items-center justify-around gap-2 lg:gap-10 flex-wrap grid grid-cols-2 lg:grid-cols-4">
                                 {item?.details.map((list, index) => (
                                     <button
                                         type="button"
-                                        class="nes-btn w-auto"
+                                        className="nes-btn w-auto"
                                         onClick={() => handleBtnClick(list.score, list.src)}
                                     >
                                         <div className="flex justify-center lg:justify-start items-center gap-2 text-sm">
@@ -193,14 +201,14 @@ export default function Home() {
                         </div>
                     ))}
                 </div>
-                <div class="nes-container with-title px-4! lg:px-[2rem]!">
-                    <p class="title">MY PROJECTS</p>
+                <div className="nes-container with-title px-4! lg:px-[2rem]!">
+                    <p className="title">MY PROJECTS</p>
                     <div className="flex flex-col-reverse gap-6 lg:flex-col">
                         <div className="flex gap-4 justify-end">
-                            <button type="button" class="nes-btn w-auto" onClick={scrollLeft}>
+                            <button type="button" className="nes-btn w-auto" onClick={scrollLeft}>
                                 <Image src={arrow} className="w-10 object-contain rotate-180" />
                             </button>
-                            <button type="button" class="nes-btn w-auto" onClick={scrollRight}>
+                            <button type="button" className="nes-btn w-auto" onClick={scrollRight}>
                                 <Image src={arrow} className="w-10 object-contain" />
                             </button>
                         </div>
@@ -208,18 +216,24 @@ export default function Home() {
                             className="w-full flex overflow-x-scroll gap-6 snap-x snap-mandatory pb-0 lg:pb-6 box-project"
                             ref={scrollableDivRef}
                         >
-                            {Array.from({ length: 6 }, (_, i) => (
+                            {myProjectData.map((item, index) => (
                                 <div
-                                    key={i}
-                                    class="nes-container with-title p-2! lg:p-[2rem]! is-centered lg:w-[26rem] grid gap-6 snap-center hover:scale-[98%]"
+                                    key={index}
+                                    className="nes-container with-title p-2! lg:p-[2rem]! is-centered lg:w-[26rem] grid gap-6 snap-center hover:scale-[98%]"
                                 >
-                                    <Image src={moncookImg1} className="w-full h-[10rem] object-cover" />
-                                    <p className="text-xl text-start m-0!">Mon Cooking</p>
-                                    <div className="flex gap-3">
-                                        <button type="button" class="nes-btn is-disabled w-full">
-                                            Website
-                                        </button>
-                                        <button type="button" class="nes-btn w-full" onClick={openPopup}>
+                                    <Image src={item.mainImage} className="w-full h-[10rem] object-cover" />
+                                    <p className="text-xl text-start m-0!">{item.title}</p>
+                                    <div className="flex gap-4">
+                                        <Link href={item.url} target="_blank" rel={item.title}>
+                                            <button type="button" className="nes-btn w-full">
+                                                Website
+                                            </button>
+                                        </Link>
+                                        <button
+                                            type="button"
+                                            className="nes-btn w-full"
+                                            onClick={() => openPopup(item)}
+                                        >
                                             Detail
                                         </button>
                                     </div>
@@ -228,8 +242,8 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
-                <div class="nes-container with-title">
-                    <p class="title">MY CONTSCT</p>
+                <div className="nes-container with-title">
+                    <p className="title">MY CONTSCT</p>
                     <div className="">
                         <div className="flex items-center gap-4 lg:gap-10 mb-6 flex-wrap">
                             <div
@@ -238,19 +252,19 @@ export default function Home() {
                                     alert("Copied to clipboard!");
                                 }}
                             >
-                                <i class="nes-icon gmail is-medium hover:-translate-y-4 transition-all duration-300 ease-in-out"></i>
+                                <i className="nes-icon gmail is-medium hover:-translate-y-4 transition-all duration-300 ease-in-out"></i>
                             </div>
                             <Link href="https://github.com/Monparty" target="_blank">
-                                <i class="nes-icon github is-medium hover:-translate-y-4 transition-all duration-300 ease-in-out"></i>
+                                <i className="nes-icon github is-medium hover:-translate-y-4 transition-all duration-300 ease-in-out"></i>
                             </Link>
                             <Link href="https://www.linkedin.com/in/suniti-sukontaprapun-a4975b347/" target="_blank">
-                                <i class="nes-icon linkedin is-medium hover:-translate-y-4 transition-all duration-300 ease-in-out"></i>
+                                <i className="nes-icon linkedin is-medium hover:-translate-y-4 transition-all duration-300 ease-in-out"></i>
                             </Link>
                             <Link href="https://web.facebook.com/mon.monza.5855" target="_blank">
-                                <i class="nes-icon facebook is-medium hover:-translate-y-4 transition-all duration-300 ease-in-out"></i>
+                                <i className="nes-icon facebook is-medium hover:-translate-y-4 transition-all duration-300 ease-in-out"></i>
                             </Link>
                             <Link href="https://www.instagram.com/monsuniti/" target="_blank">
-                                <i class="nes-icon instagram is-medium hover:-translate-y-4 transition-all duration-300 ease-in-out"></i>
+                                <i className="nes-icon instagram is-medium hover:-translate-y-4 transition-all duration-300 ease-in-out"></i>
                             </Link>
                         </div>
                         <p className="indent-10 leading-7">
@@ -261,39 +275,36 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-            {isPopupOpen && (
+            {isPopupOpen.isOpen && (
                 <section className="mx-auto px-4! lg:px-[2rem]! lg:w-1/2 fixed inset-x-0 top-8 lg:top-12 z-20">
-                    <div class="nes-container with-title bg-white relative px-4! lg:px-[2rem]!">
-                        <div class="nes-container with-title ">
-                            <p class="title">text</p>
+                    <div className="nes-container with-title bg-white relative px-4! lg:px-[2rem]!">
+                        <div className="nes-container with-title ">
+                            <p className="title">{isPopupOpen.data.title}</p>
                             <div className="flex justify-center gap-3 mb-6">
-                                <button type="button" class="nes-btn w-auto" onClick={scrollLeftPop}>
+                                <button type="button" className="nes-btn w-auto" onClick={scrollLeftPop}>
                                     <Image src={arrow} className="w-10 object-contain rotate-180" />
                                 </button>
                                 <div
                                     className="w-full flex overflow-x-scroll gap-3 snap-x snap-mandatory box-project"
                                     ref={scrollableDivRefPop}
                                 >
-                                    {Array.from({ length: 6 }, (_, i) => (
-                                        <div key={i} class="w-[26rem] grid snap-center">
+                                    {isPopupOpen.data.imageList.map((item, index) => (
+                                        <div key={index} className="w-[26rem] grid snap-center">
                                             <div className="w-[16rem]">
-                                                <Image src={moncookImg1} className="w-full h-[10rem] object-cover" />
+                                                <Image src={item} className="w-full h-[10rem] object-cover" />
                                             </div>
                                         </div>
                                     ))}
                                 </div>
-                                <button type="button" class="nes-btn w-auto" onClick={scrollRightPop}>
+                                <button type="button" className="nes-btn w-auto" onClick={scrollRightPop}>
                                     <Image src={arrow} className="w-10 object-contain" />
                                 </button>
                             </div>
-                            <p className="indent-10 text-sm">
-                                committed to creating outstanding and valuable digital products. I possess a deep
-                                understanding of User Experience (UX) and User Interface (UI), coupled with strong
-                                Front-End coding skills. I e.
-                            </p>
-
+                            <div className="max-h-[50dvh] overflow-y-scroll">
+                                <div className="text-sm">{isPopupOpen.data.detail}</div>
+                            </div>
                             <div className="absolute -right-8 lg:-right-13 -top-13">
-                                <button type="button" class="nes-btn is-error w-fit" onClick={closePopup}>
+                                <button type="button" className="nes-btn is-error w-fit" onClick={closePopup}>
                                     x
                                 </button>
                             </div>
@@ -302,7 +313,7 @@ export default function Home() {
                 </section>
             )}
 
-            {isPopupOpen && (
+            {isPopupOpen.isOpen && (
                 <div
                     className="fixed top-0 left-0 right-0 bottom-0 w-full h-full opacity-50  bg-black z-10"
                     onClick={closePopup}

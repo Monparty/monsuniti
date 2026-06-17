@@ -26,6 +26,17 @@ import rhfLogo from "../../public/images/rhfLogo.png";
 import yupLogo from "../../public/images/yupLogo.png";
 import gsapLogo from "../../public/images/gsapLogo.png";
 import aiLogo from "../../public/images/aiLogo.png";
+import claudeLogo from "../../public/images/claudeLogo.png";
+
+// project images
+import afp1 from "../../public/projectImages/afp1.png";
+import afp2 from "../../public/projectImages/afp2.png";
+import afp3 from "../../public/projectImages/afp3.png";
+import afp4 from "../../public/projectImages/afp4.png";
+import afp5 from "../../public/projectImages/afp5.png";
+import afp6 from "../../public/projectImages/afp6.png";
+import pnw1 from "../../public/projectImages/pnw1.png";
+import pnw2 from "../../public/projectImages/pnw2.png";
 
 export const workExperienceData = [
     {
@@ -234,7 +245,7 @@ export const technicalSkills = [
         details: [
             {
                 name: "Claude Code",
-                src: gitLogo,
+                src: claudeLogo,
             },
             {
                 name: "Cursor",
@@ -253,5 +264,81 @@ export const technicalSkills = [
                 src: aiLogo,
             },
         ],
+    },
+];
+
+export const myProjectData = [
+    {
+        title: "Afferprice",
+        url: "https://afferprice.com/",
+        mainImage: afp1,
+        imageList: [afp1, afp2, afp3, afp4, afp5, afp6],
+        detail: (
+            <div>
+                <div className="nes-text is-primary mb-4!">Tech: Next.js, Supabase</div>
+                <div className="mb-5! pb-5! border-b-4 leading-7">
+                    Afferprice (afferprice.com) is an online auction platform based in Thailand, specializing in
+                    high-value collectibles and luxury items.
+                </div>
+                <div className="lists pl-3 lg:pl-10">
+                    <ul className="nes-list is-circle grid gap-4 leading-7 mb-0!">
+                        <li>
+                            Main Categories: Trading cards (One Piece, Pokémon), luxury watches, Thai amulets, Art Toys
+                            (Bearbrick), and fine jewelry.
+                        </li>
+                        <li>Real-time Auctions: Features live countdowns and an Auto-bid system.</li>
+                        <li>Buyer Protection: Includes transit insurance and a 7-day return policy.</li>
+                        <li>
+                            Seller Fees: 8% commission on successful sales only; complimentary product photography and
+                            listing services are provided.
+                        </li>
+                    </ul>
+                </div>
+                <div className="mb-5! pb-5! border-b-4"></div>
+                <div className="leading-7">
+                    Technical Note: The platform currently appears to be in its development or beta stage. The live site
+                    contains developer notes (Dev Todo List) outlining ongoing work for features like live countdowns,
+                    payment gateway integration, KYC verification, and dark mode. Current listings likely consist of
+                    mockup data for layout demonstration.
+                </div>
+            </div>
+        ),
+    },
+    {
+        title: "Painganwad",
+        url: "https://painganwad.com/",
+        mainImage: pnw1,
+        imageList: [pnw1, pnw2],
+        detail: (
+            <div>
+                <div className="nes-text is-primary mb-4!">Tech: Next.js, Supabase</div>
+                <div className="mb-5! pb-5! border-b-4 leading-7">
+                    Painganwad (painganwad.com) is a digital platform and directory dedicated to tracking temple fairs
+                    (Ngan Wat), annual festivals, and Buddhist merit-making events across Thailand. The name is a clever
+                    Thai wordplay combining "Go to a temple fair" (ไปงานวัด) with a creative artistic tone.
+                </div>
+                <div className="lists pl-3 lg:pl-10">
+                    <ul className="nes-list is-circle grid gap-4 leading-7 mb-0!">
+                        <li>
+                            Location-Based Search: Quickly discover ongoing or upcoming temple fairs and weekend temple
+                            markets near your current location.
+                        </li>
+                        <li>
+                            Event Calendar: Comprehensive listings for major annual festivals, including Robe-Offering
+                            ceremonies (Kathin), Loy Krathong, and local temple celebrations, complete with exact dates,
+                            operating hours, and location maps.
+                        </li>
+                        <li>
+                            User-Generated Content: Anyone, including locals and temple committees, can register and
+                            list new temple events for free to help promote community tourism.
+                        </li>
+                        <li>
+                            Personalized Planning: Features a "Save to Favorites" option to bookmark upcoming festivals
+                            for travel planning.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        ),
     },
 ];
