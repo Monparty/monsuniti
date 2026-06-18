@@ -33,3 +33,31 @@ a {
 button:hover {
   scale: 106%;
 }
+
+@keyframes lightbox-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes lightbox-zoom {
+  from {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.lightbox-overlay {
+  animation: lightbox-fade 0.25s ease-out;
+}
+
+.lightbox-image {
+  animation: lightbox-zoom 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}

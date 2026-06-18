@@ -37,6 +37,10 @@ import afp5 from "../../public/projectImages/afp5.png";
 import afp6 from "../../public/projectImages/afp6.png";
 import pnw1 from "../../public/projectImages/pnw1.png";
 import pnw2 from "../../public/projectImages/pnw2.png";
+import pnw3 from "../../public/projectImages/pnw3.png";
+import pnw4 from "../../public/projectImages/pnw4.png";
+import pnw5 from "../../public/projectImages/pnw5.png";
+import pnw6 from "../../public/projectImages/pnw6.png";
 
 export const personalInfo = {
     greeting: "Hi I'm Mon",
@@ -347,7 +351,7 @@ export const myProjectData = [
         title: "Painganwad",
         url: "https://painganwad.com/",
         mainImage: pnw1,
-        imageList: [pnw1, pnw2],
+        imageList: [pnw1, pnw2, pnw3, pnw4, pnw5, pnw6],
         detail: (
             <div>
                 <div className="nes-text is-primary mb-4!">Tech: Next.js, Supabase</div>

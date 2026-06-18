@@ -8,7 +8,7 @@ import Contact from "./components/Contact";
 
 export default function Home() {
     return (
-        <div className="container mx-auto px-4 lg:px-10 py-10 flex flex-col gap-8 lg:gap-10">
+        <div className="container mx-auto px-4 lg:px-10 pt-10 pb-20 flex flex-col gap-8 lg:gap-10">
             <Hero />
             <About />
             <ProfileEducation />
