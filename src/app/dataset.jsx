@@ -43,6 +43,12 @@ import pnw3 from "../../public/projectImages/pnw3.png";
 import pnw4 from "../../public/projectImages/pnw4.png";
 import pnw5 from "../../public/projectImages/pnw5.png";
 import pnw6 from "../../public/projectImages/pnw6.png";
+import mfd1 from "../../public/projectImages/mfd1.png";
+import mfd2 from "../../public/projectImages/mfd2.png";
+import mfd3 from "../../public/projectImages/mfd3.png";
+import mfd4 from "../../public/projectImages/mfd4.png";
+import mfd5 from "../../public/projectImages/mfd5.png";
+import mfd6 from "../../public/projectImages/mfd6.png";
 
 export const personalInfo = {
     greeting: "Hi I'm Mon",
@@ -390,6 +396,24 @@ export const myProjectData = [
                             for travel planning.
                         </li>
                     </ul>
+                </div>
+            </div>
+        ),
+    },
+    {
+        title: "muffydesign",
+        url: "https://muffydesign.vercel.app/",
+        mainImage: mfd1,
+        imageList: [mfd1, mfd2, mfd3, mfd4, mfd5, mfd6],
+        detail: (
+            <div>
+                <div className="nes-text is-primary mb-4!">Tech: Next.js</div>
+                <div className="mb-5! pb-5! leading-7">
+                    Muffy Design is a creative landing page that showcases professional web design and print media
+                    services. It highlights the studio's portfolio, design expertise, and creative solutions for
+                    businesses. The website is designed to help potential clients explore services and build trust
+                    through visual presentation. Its primary goal is to encourage visitors to get in touch for website
+                    and graphic design projects.
                 </div>
             </div>
         ),
