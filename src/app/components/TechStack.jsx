@@ -1,7 +1,11 @@
+"use client";
 import Image from "next/image";
 import { techStackIntro, technicalSkills } from "../dataset";
+import { useState } from "react";
 
 export default function TechStack() {
+    const [selectedSkill, setSelectedSkill] = useState({ group: "", name: "" });
+
     return (
         <div className="nes-container with-title">
             <p className="title">MY TECH STACK</p>
@@ -14,13 +18,25 @@ export default function TechStack() {
                     <p className="title">{group.title}</p>
                     <div className="items-center justify-around gap-2 lg:gap-10 flex-wrap grid grid-cols-2 lg:grid-cols-4">
                         {group.details.map((skill) => (
-                            <button type="button" className="nes-btn w-auto" key={skill.name}>
+                            <button
+                                type="button"
+                                className="nes-btn w-auto"
+                                key={skill.name}
+                                onClick={() => setSelectedSkill({ group: group.title, name: skill.name })}
+                            >
                                 <div className="flex justify-center lg:justify-start items-center gap-2 text-sm">
-                                    <Image src={skill.src} alt={skill.name} className="w-8 h-8 lg:w-12 lg:h-12 object-contain" />
+                                    <Image
+                                        src={skill.src}
+                                        alt={skill.name}
+                                        className="w-8 h-8 lg:w-12 lg:h-12 object-contain"
+                                    />
                                     <div className="hidden lg:block">{skill.name}</div>
                                 </div>
                             </button>
                         ))}
+                    </div>
+                    <div className="p-6 flex items-center justify-center lg:hidden">
+                        {selectedSkill.group === group.title && selectedSkill.name}
                     </div>
                 </div>
             ))}

@@ -27,6 +27,8 @@ import yupLogo from "../../public/images/yupLogo.png";
 import gsapLogo from "../../public/images/gsapLogo.png";
 import aiLogo from "../../public/images/aiLogo.png";
 import claudeLogo from "../../public/images/claudeLogo.png";
+import dotnetLogo from "../../public/images/dotnetLogo.png";
+import csharpLogo from "../../public/images/csharpLogo.png";
 
 // project images
 import afp1 from "../../public/projectImages/afp1.png";
@@ -219,6 +221,10 @@ export const technicalSkills = [
                 name: "Drizzle ORM",
                 src: drizzleLogo,
             },
+            {
+                name: "C#",
+                src: csharpLogo,
+            },
         ],
     },
     {
@@ -280,6 +286,10 @@ export const technicalSkills = [
             {
                 name: "Axios",
                 src: reactLogo,
+            },
+            {
+                name: ".NET Framework",
+                src: dotnetLogo,
             },
         ],
     },
